@@ -12,7 +12,7 @@
 
 <body>
   <!--heading -->
-    <header class="text-gray-600 body-font">
+    <header id = "home" class="text-gray-600 body-font">
        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center" >
           
           <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
@@ -26,7 +26,7 @@
             <span class="ml-3 text-xl">Flood Saviour</span>
           </a>
           <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            <a href = "/Website/index.html" home class="mr-5 hover:text-gray-900">Home</a>
+            <a href = "#home" home class="mr-5 hover:text-gray-900">Home</a>
             <a href = "#about" home class="mr-5 hover:text-gray-900">About</a>
             <a href = "#our_team" home class="mr-5 hover:text-gray-900">Team</a>
             <a href = "#contact_us" home class="mr-5 hover:text-gray-900">Contact Us</a>
@@ -291,5 +291,20 @@
           </div>
         </div>
       </footer>
+<!--fixing header-->
+  <script>
+    window.onscroll = function() {myFunction()};
+    
+    var header = document.getElementById("home");
+    var sticky = header.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+  </script>
 </body>
 </html>
